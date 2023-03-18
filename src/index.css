@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 body {
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
+	min-width: 400px;
+	min-height: 700px;
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
@@ -13,4 +15,31 @@ body {
 .content > * {
 	width: 100vw;
 	height: 100vh;
+}
+.home-navbar {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 4.5rem);
+}
+@font-face {
+	font-family: "Bidenatrial";
+	src: url("./fonts/Bidenatrial.otf");
+}
+@font-face {
+	font-family: "Des-Morgan";
+	src: url("./fonts/DesMorgan.otf");
+}
+@font-face {
+	font-family: "Glamore";
+	src: url("./fonts/Glamore.otf");
+}
+@font-face {
+	font-family: "Madyntha-Geradine";
+	src: url("./fonts/MadynthaGeradine.otf");
+}
+@font-face {
+	font-family: "Nolluqa";
+	src: url("./fonts/Nolluqa.otf");
+}
+@font-face {
+	font-family: "Redemption";
+	src: url("./fonts/Redemption.otf");
 }
