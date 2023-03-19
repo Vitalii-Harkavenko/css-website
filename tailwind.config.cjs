@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'bidenatrial': ['Bidenatrial', 'sans-serif'],
+        'chaviera': ['Chaviera', 'sans-serif'],
         'des-morgan': ['Des-Morgan', 'sans-serif'],
         'glamore': ['Glamore', 'sans-serif'],
         'madyntha-geradine': ['Madyntha-Geradine', 'sans-serif'],
