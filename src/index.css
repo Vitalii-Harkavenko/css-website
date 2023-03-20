@@ -32,6 +32,9 @@ body {
 .animation-nav-hovered {
 	@apply absolute left-1/2 -translate-x-1/2 duration-200 ease-in-out translate-y-[200%] group-hover:translate-y-[0];
 }
+.desc {
+	clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
+}
 @font-face {
 	font-family: "Chaviera";
 	src: url("./fonts/Chaviera.otf");
