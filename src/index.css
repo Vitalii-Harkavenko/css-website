@@ -4,36 +4,29 @@
 
 body {
 	width: 100vw;
-	height: 100vh;
-	min-width: 1400px;
-	min-height: 700px;
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
 	font-family: sans-serif;
+	overflow: hidden;
+	overflow-y: scroll;
 }
 .content {
 	width: 100vw;
 	min-width: 1400px;
-	height: 100vh;
 }
-.home-navbar {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 43%);
+.home-nav {
+	width: 100vw;
+    clip-path: polygon(0 0, 100% 40%, 100% 85%, 0 40%);
 }
-.home-navbar-shadow {
+.home-nav-line-shadow {
 	filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
 }
-.home-navbar-line {
+.home-nav-line {
     clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 50%);
 }
-.animation-nav-main {
-	@apply absolute left-1/2 -translate-x-1/2 duration-200 ease-in-out group-hover:translate-y-[-200%];
-}
-.animation-nav-hovered {
-	@apply absolute left-1/2 -translate-x-1/2 duration-200 ease-in-out translate-y-[200%] group-hover:translate-y-[0];
-}
-.desc {
-	clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
+.nav-animation-setup {
+	@apply absolute left-1/2 -translate-x-1/2 duration-150 ease-in-out;
 }
 @font-face {
 	font-family: "Chaviera";
@@ -48,8 +41,8 @@ body {
 	src: url("./fonts/Glamore.otf");
 }
 @font-face {
-	font-family: "Madyntha-Geradine";
-	src: url("./fonts/MadynthaGeradine.otf");
+	font-family: "Twilight-Darling";
+	src: url("./fonts/Twilightdarling.otf");
 }
 @font-face {
 	font-family: "Nolluqa";
@@ -58,4 +51,18 @@ body {
 @font-face {
 	font-family: "Redemption";
 	src: url("./fonts/Redemption.otf");
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(40, 40, 40);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(85, 85, 85, 0.6);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
