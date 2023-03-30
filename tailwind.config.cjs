@@ -6,9 +6,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        'custom-red': 'rgb(255, 31, 31)',
-        'custom-red-bg': 'rgb(225, 0, 60)',
+      backgroundColor : {
+        'blue-1200' : '#0c121e',
       },
       fontFamily: {
         'chaviera': ['Chaviera', 'sans-serif'],

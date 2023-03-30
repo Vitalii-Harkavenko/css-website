@@ -1,24 +1,27 @@
 import HomeNavbar from "./HomeNavbar"
 export default function Home() {
 	return (
-		<div className="content bg-black h-screen">
-			<HomeNavbar/>
-			<main className="text-white">
-				<section className="relative text-2xl">
-					<img src="./images/home-bg1.jpg" className="w-screen"/>
-					<div className="h-40 bg-stone-800 p-4 border-t-emerald-500 border-t-[8px] border-solid w-2/3 ml-[30px] rounded-lg">
-						<p className="text-emerald-600 text-2xl">
-							Very important heading
-						</p>
-						<p className="text-xl">
-							So this is CSS oriented portfolio website about some tech products and since the goal
-							is to showcase my design abilities don't expect anything realistic here :D 
-						</p>
+		<div className="content bg-blue-1200">
+			<HomeNavbar />
+			<main className="text-white text-2xl">
+				<section className="relative w-screen h-screen">
+					<div className="absolute w-full h-[85%]">
+						<div className="absolute z-50 w-full h-full backdrop-saturate-[0.75] backdrop-brightness-50">
+							<div className="line-filter"></div>
+						</div>
+						<div className="absolute z-40 bg-cover w-full h-full bg-center bg-[url('/images/parallaxEf/parallaxL1.png')]"></div>
+						<div className="absolute z-30 bg-cover w-full h-full bg-center bg-[url('/images/parallaxEf/parallaxL2.png')]"></div>
+						<div className="absolute z-20 bg-cover w-full h-full bg-center bg-[url('/images/parallaxEf/parallaxL3.png')]"></div>
+						<div className="absolute z-10 bg-cover w-full h-full bg-center bg-[url('/images/parallaxEf/parallaxL4.png')]"></div>
+					</div>
+					<div className="absolute w-full h-[85%] top-1/2 left-[150vw] -translate-x-[50vw] -translate-y-1/2">
+						<div className="absolute z-40 bg-cover w-full h-full bg-center bg-[url('/images/parallaxEf/parallaxL1.png')]"></div>
+						<div className="absolute z-30 bg-cover w-full h-full bg-center bg-[url('/images/parallaxEf/parallaxL2.png')]"></div>
+						<div className="absolute z-20 bg-cover w-full h-full bg-center bg-[url('/images/parallaxEf/parallaxL3.png')]"></div>
+						<div className="absolute z-10 bg-cover w-full h-full bg-center bg-[url('/images/parallaxEf/parallaxL4.png')]"></div>
 					</div>
 				</section>
-				<section>
-					<p>sfjfj</p>
-					<p>fdsji</p>
+				<section className="h-screen">
 				</section>
 			</main>
 		</div>
