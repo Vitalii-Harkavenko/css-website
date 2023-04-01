@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor : {
-        'blue-1200' : '#0c121e',
+        'main' : '#1c1f24',
+        'secondary' : '#15151a',
       },
       fontFamily: {
         'chaviera': ['Chaviera', 'sans-serif'],
