@@ -10,31 +10,14 @@ html, body {
 	width: 100vw;
 	font-family: 'Times New Roman', Times, serif;
 }
-.content {
-	width: 100vw;
-	min-height: 100vh;
-	overflow: hidden;
-	position: relative;
-}
-.line-filter {
-	background-size: 100% 6px;
-	background-image: linear-gradient(
-		rgba(150, 210, 255, 0.2) 3px,
-		transparent 3px,
-		transparent 6px
-	);
-}
 .home-nav-el {
-	@apply grow h-20 min-w-[15rem] w-1/4 relative overflow-hidden;
+	@apply h-10 left-[7.5vw] w-40 relative overflow-hidden;
 }
 .nav-animation-main {
-	@apply absolute left-8 leading-[5rem] h-full w-full duration-200 ease-in-out group-hover:translate-y-[150%];
+	@apply absolute leading-[2.5rem] h-full w-full duration-200 ease-in-out group-hover:translate-y-[-100%];
 }
 .nav-animation-hovered {
-	@apply absolute left-8 leading-[5rem] h-full w-full duration-200 ease-in-out translate-y-[-150%] group-hover:translate-y-[0];
-}
-.nav-animation-border {
-	@apply absolute left-4 w-[0.15rem] h-full duration-200 ease-in-out translate-y-[-150%] group-hover:translate-y-[0] bg-gradient-to-b from-transparent via-white to-transparent;
+	@apply absolute leading-[2.5rem] h-full w-full duration-200 ease-in-out translate-y-[100%] group-hover:translate-y-[0];
 }
 /*
 .nav-gradient-radial {
@@ -47,8 +30,8 @@ html, body {
 	transition: left 0.4s ease-out;
 }
 @font-face {
-	font-family: "Chaviera";
-	src: url("./fonts/Chaviera.otf");
+	font-family: "Montserrat";
+	src: url("./fonts/Montserrat.ttf");
 }
 @font-face {
 	font-family: "Des-Morgan";
@@ -59,18 +42,18 @@ html, body {
 	src: url("./fonts/Glamore.otf");
 }
 @font-face {
-	font-family: "Twilight-Darling";
-	src: url("./fonts/Twilightdarling.otf");
-}
-@font-face {
 	font-family: "Nolluqa";
 	src: url("./fonts/Nolluqa.otf");
 }
 @font-face {
-	font-family: "Redemption";
-	src: url("./fonts/Redemption.otf");
+	font-family: "Montserrat-Thin";
+	src: url("./fonts/Montserrat-Thin.ttf");
 }
 ::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
+	display: none;
+}
+@-moz-document url-prefix() {
+	body {
+	  scrollbar-width: none;
+	}
 }
