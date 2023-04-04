@@ -62,7 +62,7 @@ export default function SectionOne() {
 			</Link>
 			<div className="w-[85vw] h-[75vh] overflow-hidden" ref={thumbs[1]}>
 				<div className="relative w-[85vw] h-[75vh] overflow-hidden" ref={thumbContents[1]}>
-					<h1 className="text-3xl font-glamore">Your Client Reviews</h1>
+					<h1 className="text-3xl font-glamore">Your Client's Reviews</h1>
 					<div className="absolute z-50 w-full h-full backdrop-contrast-[1.15] backdrop-saturate-[0.75] backdrop-brightness-[0.75]"></div>
 					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden">
 						<SecondBg />
