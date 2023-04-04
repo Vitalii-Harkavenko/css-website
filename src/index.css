@@ -19,6 +19,9 @@ html, body {
 .nav-animation-hovered {
 	@apply absolute leading-[2.5rem] h-full w-full duration-200 ease-in-out translate-y-[100%] group-hover:translate-y-[0];
 }
+.scroll-element {
+	@apply absolute right-0 -translate-y-1/2 h-[15vh] w-2 bg-neutral-700 rounded-l-md hover:w-6 transition-all duration-300;
+}
 /*
 .nav-gradient-radial {
 	background-image: radial-gradient(ellipse at center, #2f4789 0%, #c084fc00 70%);
