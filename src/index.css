@@ -9,15 +9,16 @@ html, body {
 	box-sizing: border-box;
 	width: 100vw;
 	font-family: 'Times New Roman', Times, serif;
+	background-color: #15151a;
 }
 .home-nav-el {
-	@apply h-10 left-[7.5vw] w-40 relative overflow-hidden;
+	@apply relative h-10 left-0 w-40 overflow-hidden;
 }
 .nav-animation-main {
-	@apply absolute leading-[2.5rem] h-full w-full duration-200 ease-in-out group-hover:translate-y-[-100%];
+	@apply absolute left-0 h-full w-full duration-200 ease-in-out group-hover:translate-y-[-100%];
 }
 .nav-animation-hovered {
-	@apply absolute leading-[2.5rem] h-full w-full duration-200 ease-in-out translate-y-[100%] group-hover:translate-y-[0];
+	@apply absolute left-0 h-full w-full duration-200 ease-in-out translate-y-[100%] group-hover:translate-y-[0];
 }
 .scroll-element {
 	@apply absolute right-0 -translate-y-1/2 h-[15vh] w-2 bg-neutral-700 rounded-l-md hover:w-6 transition-all duration-300;

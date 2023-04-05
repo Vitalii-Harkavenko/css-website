@@ -1,5 +1,5 @@
 import SecOneNavbar from "./sectionOnePages/SectionOneNav";
-import { Parallax, SecondBg, ThirdBg } from './sectionOnePages/ImageComponents';
+import { FirstBg, SecondBg, ThirdBg } from './sectionOnePages/ImageComponents';
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
@@ -11,11 +11,7 @@ export default function SectionOne() {
 	const position = (el) => el.current.getBoundingClientRect();
 	const setScrollColor = (el) => el.current.style.backgroundColor = "rgb(163 163 163)";
 	const resetScrollColor = () => scroll.forEach(el => el.current.style.backgroundColor = 'rgb(64 64 64)');
-
-	const handleScroll = () => {
-		for (let i = 0; i < thumbContents.length; i++) {
-			thumbContents[i].current.style.top = `calc(${-position(thumbs[i]).top}px + 12.5vh)`;
-		};
+	const handleScrollColor = () => {
 		if (position(thumbs[0]).top >= 0 && position(thumbs[0]).bottom <= window.innerHeight) {
 			resetScrollColor();
 			setScrollColor(scroll[0]);
@@ -30,6 +26,13 @@ export default function SectionOne() {
 		};
 	};
 
+	const handleScroll = () => {
+		for (let i = 0; i < thumbContents.length; i++) {
+			thumbContents[i].current.style.top = `calc(${-position(thumbs[i]).top}px + 12.5vh)`;
+		};
+		handleScrollColor();
+	};
+
 	const handleScrollDirect = (el) => {
 		window.scrollTo({
 			top: thumbs[el].current.offsetTop - 0.125 * window.innerHeight,
@@ -39,6 +42,7 @@ export default function SectionOne() {
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll, { passive: true });
+		handleScrollColor();
 	
 		return () => { window.removeEventListener('scroll', handleScroll) };
 	}, []);
@@ -54,9 +58,9 @@ export default function SectionOne() {
 			<Link to="/landingPage" className="w-[85vw] h-[75vh] overflow-hidden" ref={thumbs[0]}>
 				<div className="relative w-[85vw] h-[75vh] overflow-hidden" ref={thumbContents[0]}>
 					<h1 className="text-3xl font-glamore">Landing Page Example</h1>
-					<div className="absolute z-50 w-full h-full backdrop-contrast-125 backdrop-saturate-[0.75] backdrop-brightness-[0.75]"></div>
+					<div className="absolute z-50 w-full h-full backdrop-contrast-125 backdrop-saturate-[0.70] backdrop-brightness-[0.75]"></div>
 					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden">
-						<Parallax />
+						<FirstBg />
 					</div>
 				</div>
 			</Link>
