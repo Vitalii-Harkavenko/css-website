@@ -8,7 +8,7 @@ html, body {
     border: none;
 	box-sizing: border-box;
 	width: 100vw;
-	font-family: 'Times New Roman', Times, serif;
+	font-family: "Montserrat", sans-serif;
 	background-color: #15151a;
 }
 .home-nav-el {
@@ -29,9 +29,19 @@ html, body {
 	transition: left 0.4s ease-out;
 }
 */
-.main-gradient-radial {
+.gradient-radial {
 	background-image: radial-gradient(ellipse at center, #142544 0%, #c084fc00 70%);
 	transition: left 0.4s ease-out;
+}
+.shadow {
+	filter: drop-shadow(0 0 1rem black);
+}
+.landing-card {
+	@apply h-full w-full bg-secondary rounded-xl drop-shadow-xl;
+	border: solid 1px rgb(50, 50, 50);
+}
+main {
+	min-width: 500px;
 }
 @font-face {
 	font-family: "Montserrat";

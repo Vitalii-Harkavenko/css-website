@@ -1,5 +1,5 @@
 import SecOneNavbar from "./sectionOnePages/SectionOneNav";
-import { FirstBg, SecondBg, ThirdBg } from './sectionOnePages/ImageComponents';
+import { Filter, FirstBg, SecondBg, ThirdBg } from './sectionOnePages/GraphicComponents';
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
@@ -58,7 +58,7 @@ export default function SectionOne() {
 			<Link to="/landingPage" className="w-[85vw] h-[75vh] overflow-hidden" ref={thumbs[0]}>
 				<div className="relative w-[85vw] h-[75vh] overflow-hidden" ref={thumbContents[0]}>
 					<h1 className="text-3xl font-glamore">Landing Page Example</h1>
-					<div className="absolute z-50 w-full h-full backdrop-contrast-125 backdrop-saturate-[0.70] backdrop-brightness-[0.75]"></div>
+					<Filter />
 					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden">
 						<FirstBg />
 					</div>
@@ -67,7 +67,7 @@ export default function SectionOne() {
 			<div className="w-[85vw] h-[75vh] overflow-hidden" ref={thumbs[1]}>
 				<div className="relative w-[85vw] h-[75vh] overflow-hidden" ref={thumbContents[1]}>
 					<h1 className="text-3xl font-glamore">Your Client's Reviews</h1>
-					<div className="absolute z-50 w-full h-full backdrop-contrast-[1.15] backdrop-saturate-[0.75] backdrop-brightness-[0.75]"></div>
+					<Filter />
 					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden">
 						<SecondBg />
 					</div>
@@ -76,7 +76,7 @@ export default function SectionOne() {
 			<div className="w-[85vw] h-[75vh] overflow-hidden" ref={thumbs[2]}>
 				<div className="relative w-[85vw] h-[75vh] overflow-hidden" ref={thumbContents[2]}>
 					<h1 className="text-3xl font-glamore">Mobile Variant</h1>
-					<div className="absolute z-50 w-full h-full backdrop-contrast-125 backdrop-saturate-[0.75] backdrop-brightness-[0.75]"></div>
+					<Filter />
 					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden">
 						<ThirdBg />
 					</div>
