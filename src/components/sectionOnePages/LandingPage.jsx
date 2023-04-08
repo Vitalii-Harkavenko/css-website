@@ -3,14 +3,12 @@ import { FirstBg } from './GraphicComponents';
 import { Back } from './SectionOneNav';
 
 export default function LandingPage() {
-	const display = useRef(null);
-	const el1 = useRef(null);
+	const content = useRef(null);
 	const slider = useRef(null);
-	const roundedGradient = useRef(null);
+	const blurFilter = useRef(null);
 
 	const handleScroll = () => {
-		display.current.style.top = `${window.pageYOffset * 0.5}px`;
-		el1.current.style.top = `${-window.pageYOffset * 0.2}px`;
+		blurFilter.current.style.top = `calc(${-window.pageYOffset}px + 8vh)`;
 	}
 
 	const handleClick = (direction) => {
@@ -24,6 +22,10 @@ export default function LandingPage() {
 		slider.current.style.left = `${newFrame}%`;
 	};
 
+	const handleSwipe = () => {
+		content.current.style.top = "-100vh"
+	}
+
 	useEffect(() => {
 	window.addEventListener('scroll', handleScroll, { passive: true });
 
@@ -31,22 +33,27 @@ export default function LandingPage() {
 	}, []);
 
   return (
-	<main className="relative bg-secondary w-screen min-h-screen text-center text-white">
-		<Back />
-		<div className="relative w-screen h-[85vh] bg-secondary" ref={display}>
-			<div className="absolute z-40 w-[65vw] top-[28vh] left-1/2 -translate-x-1/2">
-				<h1 className="text-5xl">
-					Welcome to the first section
-				</h1>
-				<p className='text-xl'>
-					Here can be some description or a couple of words about your company or product.
-				</p>
+	<main className="relative w-screen h-screen text-center text-white">
+		<div className="w-screen h-[92vh]">
+			<Back />
+			<div className="fixed w-screen h-[92vh] top-[8vh]">
+				<div className="absolute z-20 w-full top-[28vh]">
+					<h1 className="text-5xl">
+						Welcome to the first section
+					</h1>
+					<p className='text-xl'>
+						Here can be some description or a couple of words about your company or product.
+					</p>
+				</div>
+				<div className="absolute z-10 w-full h-full backdrop-contrast-125 backdrop-brightness-[0.85]"></div>
+				<FirstBg />
 			</div>
-			<div className="absolute z-30 w-full h-full backdrop-contrast-125 backdrop-brightness-[0.85]"></div>
-			<FirstBg />
 		</div>
-		<div className="relative z-50 bg-transparent backdrop-blur-md">
-			<p className="p-14 bg-main shadow">
+		<div className="relative overflow-hidden" ref={content}>
+			<div className="absolute h-screen w-screen backdrop-blur-md" ref={blurFilter}></div>
+			<div className="w-screen h-px bg-white"></div>
+			<div className="mx-auto w-[10vw] h-[1vh] bg-white rounded-xl -translate-y-1/2 hover:w-[15vw] transition-all duration-300" onClick={handleSwipe}></div>
+			<p className="m-14">
 				This is the first section's landing page example, made in more traditional and simple look.
 				So, suitable for websites offering real products or services like shops, restaurants, real estate, etc.
 			</p>
@@ -64,8 +71,7 @@ export default function LandingPage() {
 					Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</p>
 			</div>
-			<div className='relative bg-main min-h-screen shadow mt-12 flex flex-wrap' ref={el1}>
-				<div className="absolute rounded-full nav-gradient-radial h-[200vw] w-[200vw] top-[-100vw] left-[-100vw]" ref={roundedGradient}></div>
+			<div className='relative bg-main min-h-screen shadow mt-12 flex flex-wrap'>
 				<div className='relative h-screen min-w-[calc(500px-5rem)] overflow-hidden grow-[2]'>
 					<svg onClick={() => handleClick('left')} className="absolute w-[5%] top-1/2 -translate-y-1/2 z-10 -left-[1%]" viewBox="-19.04 0 75.803 75.803" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Group_64" data-name="Group 64" transform="translate(-624.082 -383.588)"> <path id="Path_56" data-name="Path 56" d="M660.313,383.588a1.5,1.5,0,0,1,1.06,2.561l-33.556,33.56a2.528,2.528,0,0,0,0,3.564l33.556,33.558a1.5,1.5,0,0,1-2.121,2.121L625.7,425.394a5.527,5.527,0,0,1,0-7.807l33.556-33.559A1.5,1.5,0,0,1,660.313,383.588Z" fill="#ffffff"></path> </g> </g></svg>
 					<svg className="absolute w-[5%] top-1/2 -translate-y-1/2 z-[5]" viewBox="-19.04 0 75.803 75.803" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Group_64" data-name="Group 64" transform="translate(-624.082 -383.588)"> <path id="Path_56" data-name="Path 56" d="M660.313,383.588a1.5,1.5,0,0,1,1.06,2.561l-33.556,33.56a2.528,2.528,0,0,0,0,3.564l33.556,33.558a1.5,1.5,0,0,1-2.121,2.121L625.7,425.394a5.527,5.527,0,0,1,0-7.807l33.556-33.559A1.5,1.5,0,0,1,660.313,383.588Z" fill="#000000"></path> </g> </g></svg>
