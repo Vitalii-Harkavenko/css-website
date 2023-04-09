@@ -36,12 +36,9 @@ html, body {
 .shadow {
 	filter: drop-shadow(0 0 1rem black);
 }
-.landing-card {
-	@apply h-full w-full bg-secondary rounded-xl drop-shadow-xl;
-	border: solid 1px rgb(50, 50, 50);
-}
-main {
-	min-width: 500px;
+.section-bg {
+	@apply transition-all duration-300 absolute w-full h-full bg-main top-0 left-0 -z-10 group-hover:translate-x-full
+	before:w-full before:h-full before:bg-[rgba(0,0,0,0.15)] before:absolute before:top-0 before:-left-full;
 }
 @font-face {
 	font-family: "Montserrat";

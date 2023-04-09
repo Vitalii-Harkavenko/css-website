@@ -26,7 +26,7 @@ export default function SecOneNavbar() {
 }
 export const Back = () => {
 	return (
-		<nav className="fixed text-xl h-[8vh] w-[20vw] overflow-hidden group p-4">
+		<nav className="fixed top-0 text-xl h-[8vh] w-[20vw] overflow-hidden group p-4">
 			<Link to="/" className="absolute h-full left-[7.5vw] duration-200 ease-in-out group-hover:translate-y-[-100%] font-montserrat-thin">Back</Link>
 			<Link to="/" className="absolute h-full left-[7.5vw] duration-200 ease-in-out translate-y-[100%] group-hover:translate-y-[0] font-montserrat">Back</Link>
 		</nav>
