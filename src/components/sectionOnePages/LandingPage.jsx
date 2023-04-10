@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { FirstBg } from './GraphicComponents';
+import { Filter, FirstBg } from './GraphicComponents';
 import { Back } from './SectionOneNav';
 
 export default function LandingPage() {
@@ -28,6 +28,7 @@ export default function LandingPage() {
 	};
 
 	useEffect(() => {
+		window.scrollTo({ top : 0 });
 		handleClick();
 	}, []);
 
@@ -36,22 +37,22 @@ export default function LandingPage() {
 		<Back />
 		<div className="fixed w-screen h-[92vh] top-[8vh]">
 			<div className="absolute z-20 w-full top-[28vh]">
-				<h1 className="text-5xl">
+				<h1>
 					Welcome to the first section
 				</h1>
 				<p className='text-xl'>
-					Here can be some description or a couple of words about your company or product.
+					Here can be a description or a couple of words about your company, product.
 				</p>
 			</div>
-			<div className="absolute z-10 w-full h-full backdrop-contrast-125 backdrop-brightness-[0.85]"></div>
+			<Filter />
 			<FirstBg />
 		</div>
-		<div className="relative min-h-screen w-screen backdrop-blur-md mt-[92vh]">
+		<section className="relative min-h-screen w-screen backdrop-blur-md mt-[92vh] z-20">
 			<div className="border-solid border-t-[1px] border-t-white">
 				<div className="mx-auto w-[10vw] h-[1vh] bg-white rounded-xl -translate-y-1/2 hover:w-[15vw] transition-all duration-300" onClick={handleSwipe}></div>
 			</div>
 			<p className="m-14">
-				This is the first section's landing page example, made in more traditional and simple look.
+				This is the first section's landing page example, showing an interior design firm and made in more simple and strict look.
 				So, suitable for websites offering real products or services like shops, restaurants, real estate, etc.
 			</p>
 			<div className="flex flex-wrap p-8">
@@ -81,32 +82,32 @@ export default function LandingPage() {
 					<svg className="absolute w-[5%] top-1/2 -translate-y-1/2 -translate-x-full z-[5] left-full" viewBox="-19.04 0 75.804 75.804" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Group_65" data-name="Group 65" transform="translate(-831.568 -384.448)"> <path id="Path_57" data-name="Path 57" d="M833.068,460.252a1.5,1.5,0,0,1-1.061-2.561l33.557-33.56a2.53,2.53,0,0,0,0-3.564l-33.557-33.558a1.5,1.5,0,0,1,2.122-2.121l33.556,33.558a5.53,5.53,0,0,1,0,7.807l-33.557,33.56A1.5,1.5,0,0,1,833.068,460.252Z" fill="#000000"></path> </g> </g></svg>
 				</div>
 				<div className="grow text-left w-[45%] grid">
-					<div className="overflow-hidden relative group p-4">
-						<h2 className="text-xl ml-8 mb-4">An important section's title</h2>
-						<p className="text-neutral-300">
+					<div className="overflow-hidden relative group p-6">
+						<h3 className="section-title">An important section's title</h3>
+						<p className="section-desc">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus fuga assumenda in? Obcaecati reprehenderit expedita consequatur tenetur aliquam quo nulla quas voluptatem laborum, eos dolor ut enim tempora tempore quisquam.
 						</p>
 						<div className="section-bg"></div>
 					</div>
 					<div className="overflow-hidden relative group p-4">
-						<h2 className="text-xl ml-8 mb-4">An important section's title</h2>
-						<p className="text-neutral-300">
+						<h3 className="section-title">An important section's title</h3>
+						<p className="section-desc">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						</p>
 						<div className="section-bg"></div>
 					</div>
 					<div className="overflow-hidden relative group p-4">
-						<h2 className="text-xl ml-8 mb-4">An important section's title</h2>
-						<p className="text-neutral-300">
+						<h3 className="section-title">An important section's title</h3>
+						<p className="section-desc">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus fuga assumenda in? Obcaecati reprehenderit expedita consequatur tenetur aliquam quo nulla quas voluptatem laborum, eos dolor ut enim tempora tempore quisquam.
 						</p>
 						<div className="section-bg"></div>
 					</div>
 					<div className="overflow-hidden relative group p-4">
-						<h2 className="text-xl ml-8 mb-4">An important section's title</h2>
-						<p className="text-neutral-300">
+						<h3 className="section-title">An important section's title</h3>
+						<p className="section-desc">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit.
 							Perferendis nemo sapiente consequuntur eum ad facere porro, itaque modi assumenda vitae optio quidem, accusantium non aut ducimus obcaecati minima minus odit.
 						</p>
@@ -114,7 +115,7 @@ export default function LandingPage() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	</main>
   )
 };

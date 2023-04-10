@@ -15,6 +15,6 @@ export const ThirdBg = () => {
 };
 export const Filter = () => {
 	return (
-		<div className="absolute z-50 w-full h-full backdrop-contrast-125 backdrop-saturate-[0.85] backdrop-brightness-[0.75]"></div>
+		<div className="absolute z-10 w-full h-full backdrop-contrast-125 backdrop-brightness-[0.85]"></div>
 	)
 }

@@ -13,7 +13,7 @@ module.exports = {
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
         'montserrat-thin': ['Montserrat-Thin', 'sans-serif'],
-        'des-morgan': ['Des-Morgan', 'sans-serif'],
+        'forum': ['Forum', 'sans-serif'],
         'glamore': ['Glamore', 'sans-serif'],
         'nolluqa': ['Nolluqa', 'sans-serif'],
       },

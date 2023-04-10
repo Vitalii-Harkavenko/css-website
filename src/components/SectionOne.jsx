@@ -55,33 +55,33 @@ export default function SectionOne() {
 				<div className="scroll-element top-1/2" onClick={() => { handleScrollDirect(1)} } ref={scroll[1]}></div>
 				<div className="scroll-element top-3/4" onClick={() => { handleScrollDirect(2)} } ref={scroll[2]}></div>
 			</div>
-			<Link to="/landingPage" className="w-[85vw] h-[75vh] overflow-hidden" ref={thumbs[0]}>
+			<Link to="/landingPage" className="w-[85vw] h-[75vh] overflow-hidden group" ref={thumbs[0]}>
 				<div className="relative w-[85vw] h-[75vh] overflow-hidden" ref={thumbContents[0]}>
-					<h1 className="text-3xl font-glamore">Landing Page Example</h1>
+					<h2 className="font-forum">Landing page example</h2>
 					<Filter />
-					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden">
+					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden group-hover:w-[98vw] transition-all duration-300">
 						<FirstBg />
 					</div>
 				</div>
 			</Link>
-			<div className="w-[85vw] h-[75vh] overflow-hidden" ref={thumbs[1]}>
+			<Link to="/clientReviews" className="w-[85vw] h-[75vh] overflow-hidden group" ref={thumbs[1]}>
 				<div className="relative w-[85vw] h-[75vh] overflow-hidden" ref={thumbContents[1]}>
-					<h1 className="text-3xl font-glamore">Your Client's Reviews</h1>
+					<h2 className="font-forum">Your client's reviews</h2>
 					<Filter />
-					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden">
+					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden group-hover:w-[98vw] transition-all duration-300">
 						<SecondBg />
 					</div>
 				</div>
-			</div>
-			<div className="w-[85vw] h-[75vh] overflow-hidden" ref={thumbs[2]}>
+			</Link>
+			<Link to="/mobileVersion" className="w-[85vw] h-[75vh] overflow-hidden group" ref={thumbs[2]}>
 				<div className="relative w-[85vw] h-[75vh] overflow-hidden" ref={thumbContents[2]}>
-					<h1 className="text-3xl font-glamore">Mobile Variant</h1>
+					<h2 className="font-forum">Mobile variant</h2>
 					<Filter />
-					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden">
+					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden group-hover:w-[98vw] transition-all duration-300">
 						<ThirdBg />
 					</div>
 				</div>
-			</div>
+			</Link>
 		</main>
 	)
 }
