@@ -71,36 +71,36 @@ export default function SectionOne() {
 			<div className="fixed w-screen h-screen translate-y-[200%] pointer-events-none z-40 transition-all duration-500" ref={gradient}></div>
 			<Link 
 				to="/landingPage" className="w-[85vw] h-[75vh] overflow-hidden group z-50" 
-				ref={thumbs[0]} onMouseOver={() => setGradient(true, '#ffda2018')} onMouseLeave={() => setGradient(false)}
+				ref={thumbs[0]} onMouseOver={() => setGradient(true, '#ffda201f')} onMouseLeave={() => setGradient(false)}
 			>
 				<div className="relative w-[85vw] h-[75vh] overflow-hidden" ref={thumbContents[0]}>
 					<h2 className="font-forum">Landing page example</h2>
 					<Filter />
-					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden group-hover:w-[98vw] transition-all duration-300">
+					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden group-hover:w-[98vw] transition-300">
 						<FirstBg />
 					</div>
 				</div>
 			</Link>
 			<Link 
 				to="/clientReviews" className="w-[85vw] h-[75vh] overflow-hidden group z-50" 
-				ref={thumbs[1]} onMouseOver={() => setGradient(true, '#ff792018')} onMouseLeave={() => setGradient(false)}
+				ref={thumbs[1]} onMouseOver={() => setGradient(true, '#ff79201f')} onMouseLeave={() => setGradient(false)}
 			>
 				<div className="relative w-[85vw] h-[75vh] overflow-hidden" ref={thumbContents[1]}>
 					<h2 className="font-forum">Your client's reviews</h2>
 					<Filter />
-					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden group-hover:w-[98vw] transition-all duration-300">
+					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden group-hover:w-[98vw] transition-300">
 						<SecondBg />
 					</div>
 				</div>
 			</Link>
 			<Link 
 				to="/mobileVersion" className="w-[85vw] h-[75vh] overflow-hidden group z-50" 
-				ref={thumbs[2]} onMouseOver={() => setGradient(true, '#2088ff18')} onMouseLeave={() => setGradient(false)}
+				ref={thumbs[2]} onMouseOver={() => setGradient(true, '#2088ff1f')} onMouseLeave={() => setGradient(false)}
 			>
 				<div className="relative w-[85vw] h-[75vh] overflow-hidden" ref={thumbContents[2]}>
 					<h2 className="font-forum">Mobile variant</h2>
 					<Filter />
-					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden group-hover:w-[98vw] transition-all duration-300">
+					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden group-hover:w-[98vw] transition-300">
 						<ThirdBg />
 					</div>
 				</div>

@@ -24,7 +24,7 @@ h3 {
     line-height: 1.75rem;
 }
 #test {
-	background-color: #2088ff18
+	background-color: #2088ff1f
 }
 .home-nav-el {
 	@apply relative h-10 left-0 w-40 overflow-hidden;
@@ -38,13 +38,8 @@ h3 {
 .scroll-element {
 	@apply absolute right-0 -translate-y-1/2 h-[15vh] w-2 bg-neutral-700 rounded-l-md hover:w-6 transition-all duration-300;
 }
-.gradient-radial-sky {
-	background-image: radial-gradient(ellipse at center, #0c4a6e 0%, #c084fc00 70%);
-	transition: left 0.4s ease-out;
-}
 .gradient-radial-yellow {
-	background-image: radial-gradient(ellipse at center, #713f12 0%, #c084fc00 70%);
-	transition: left 0.4s ease-out;
+	background-image: radial-gradient(ellipse at center, #ffe12022 0%, #ff882000 70%);
 }
 .shadow {
 	filter: drop-shadow(0 0 1rem black);
@@ -58,6 +53,18 @@ h3 {
 }
 .section-desc {
 	@apply text-neutral-300 transition-all duration-300 group-hover:ml-4 mr-4;
+}
+.transition-300 {
+	@apply transition-all duration-300;
+}
+.testimonial-media {
+	@apply w-full h-[70%] lg:w-1/2 lg:h-full absolute px-4 backdrop-blur-md backdrop-brightness-90 backdrop-contrast-125;
+}
+.testimonial-media-container {
+	@apply h-[35rem] lg:h-[19rem] relative border-solid border-[2px] border-neutral-600;
+}
+.testimonial-image-media {
+	@apply lg:group-hover:w-1/2 lg:group-hover:h-full bottom-0 group-hover:h-[30%];
 }
 @font-face {
 	font-family: "Montserrat";
