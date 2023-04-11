@@ -12,14 +12,16 @@ export default function ClientReviews() {
 			</section>
 			<section className="grid gap-[25vh] my-[15vh] justify-center">
 				<article className="w-[90vw] h-[25vh] flex z-20">
-					<div>
+					<div className="w-1/2">
 						<h3 className="my-4">First Testimonial</h3>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, sint doloremque sunt enim deleniti eius iste officia obcaecati quo, 
 							beatae voluptatibus ducimus aperiam labore saepe nobis praesentium voluptatum est laudantium!
 						</p>
 					</div>
-					<div className="w-[125vw] bg-cover bg-center bg-[url('/images/sectionOne/imgs/1.jpg')]"></div>
+					<div className="w-1/2 h-full overflow-hidden">
+						<div className="w-screen h-full bg-cover bg-center bg-[url('/images/sectionOne/imgs/1.jpg')]"></div>
+					</div>
 				</article>
 			</section>
 		</main>
