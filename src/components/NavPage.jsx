@@ -1,9 +1,8 @@
-import SecOneNavbar from "./sectionOnePages/SectionOneNav";
-import { Filter, FirstBg, SecondBg, ThirdBg } from './sectionOnePages/GraphicComponents';
+import { Filter, FirstBg, SecondBg, ThirdBg } from './SmallComponents';
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-export default function SectionOne() {
+export default function NavPage() {
 	const scroll = [useRef(null), useRef(null), useRef(null)];
 	const thumbContents = [useRef(null), useRef(null), useRef(null)];
 	const thumbs = [useRef(null), useRef(null), useRef(null)];
@@ -62,7 +61,6 @@ export default function SectionOne() {
 	
 	return (
 		<main className="relative w-screen min-h-screen bg-gradient-to-b from-[rgb(21,21,26)] to-[rgb(41,41,46)] text-white grid justify-center gap-[70vh] py-[12.5vh]">
-			<SecOneNavbar />
 			<div className="fixed h-screen right-0 top-0">
 				<div className="scroll-element top-1/4" onClick={() => { handleScrollDirect(0)} } ref={scroll[0]}></div>
 				<div className="scroll-element top-1/2" onClick={() => { handleScrollDirect(1)} } ref={scroll[1]}></div>
@@ -74,7 +72,7 @@ export default function SectionOne() {
 				ref={thumbs[0]} onMouseOver={() => setGradient(true, '#ffda201f')} onMouseLeave={() => setGradient(false)}
 			>
 				<div className="relative w-[85vw] h-[75vh] overflow-hidden" ref={thumbContents[0]}>
-					<h2 className="font-forum">Landing page example</h2>
+					<h2 className="font-forum">LANDING PAGE EXAMPLE</h2>
 					<Filter />
 					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden group-hover:w-[98vw] transition-300">
 						<FirstBg />
@@ -86,7 +84,7 @@ export default function SectionOne() {
 				ref={thumbs[1]} onMouseOver={() => setGradient(true, '#ff79201f')} onMouseLeave={() => setGradient(false)}
 			>
 				<div className="relative w-[85vw] h-[75vh] overflow-hidden" ref={thumbContents[1]}>
-					<h2 className="font-forum">Your client's reviews</h2>
+					<h2 className="font-forum">YOUR CLIENT'S REVIEWS</h2>
 					<Filter />
 					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden group-hover:w-[98vw] transition-300">
 						<SecondBg />
@@ -98,7 +96,7 @@ export default function SectionOne() {
 				ref={thumbs[2]} onMouseOver={() => setGradient(true, '#2088ff1f')} onMouseLeave={() => setGradient(false)}
 			>
 				<div className="relative w-[85vw] h-[75vh] overflow-hidden" ref={thumbContents[2]}>
-					<h2 className="font-forum">Mobile variant</h2>
+					<h2 className="font-forum">MOBILE VARIANT</h2>
 					<Filter />
 					<div className="relative w-[95vw] h-[75vh] left-1/2 -translate-x-1/2 overflow-hidden group-hover:w-[98vw] transition-300">
 						<ThirdBg />

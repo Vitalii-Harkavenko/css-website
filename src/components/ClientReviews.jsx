@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Back } from "./SectionOneNav";
+import { Back } from './SmallComponents';
 
 export default function ClientReviews() {
 	const gradient = useRef(null);
@@ -26,7 +26,7 @@ export default function ClientReviews() {
 		<main className="relative w-screen text-white overflow-hidden">
 			<Back/>
 			<div className="absolute rounded-full gradient-radial-yellow h-[200vw] w-[200vw] -translate-x-1/2 -translate-y-1/2 transition-opacity duration-1000" ref={gradient}></div>
-			<p className="w-1/2 m-4 mt-[8vh]">
+			<p className="relative w-full p-[8vh] bg-main">
 				This is an example of client's reviews page with some testimonials showing clients, related to them projects images and some pseudo description
 			</p>
 			<section className="grid gap-[25vh] my-[8vh] w-full px-[8vh]">
