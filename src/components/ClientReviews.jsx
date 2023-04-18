@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Back } from './SmallComponents';
+import { Back, Partners } from './SmallComponents';
 
 export default function ClientReviews() {
 	const gradient = useRef(null);
@@ -25,41 +25,48 @@ export default function ClientReviews() {
 	return (
 		<main className="relative w-screen text-white overflow-hidden">
 			<Back/>
-			<div className="absolute rounded-full gradient-radial-yellow h-[200vw] w-[200vw] -translate-x-1/2 -translate-y-1/2 transition-opacity duration-1000" ref={gradient}></div>
-			<p className="relative w-full p-[8vh] bg-main">
-				This is an example of client's reviews page with some testimonials showing clients, related to them projects images and some pseudo description
-			</p>
-			<section className="grid gap-[25vh] my-[8vh] w-full px-[8vh]">
-				<article className="testimonial-media-container group">
-					<div className="absolute w-full h-full bg-cover bg-center bg-[url('/images/sectionOne/imgs/1.jpg')] testimonial-image-media lg:right-0 transition-300"></div>
-					<div className="testimonial-media">
-						<h3 className="py-4 group-hover:pl-8 transition-300">First Testimonial</h3>
-						<p className="group-hover:text-neutral-300 transition-300">
+			<div className="mt-[8vh] text-center bg-gradient-to-r from-gradient to-secondary">
+				<Partners />
+				<h1 className="font-forum pt-6">A client's reviews page</h1>
+				<p className="w-1/3 mx-auto pb-12">
+					This is an example of client's reviews page with some testimonials showing clients, related to them projects images and some pseudo description.
+				</p>
+			</div>
+			<section className="relative grid justify-items-center overflow-hidden text-center gap-[10vh] py-[10vh] w-screen min-h-screen bg-contrast">
+				<div className="absolute rounded-full gradient-radial h-[100vw] w-[100vw] -translate-x-1/2 -translate-y-1/2 transition-opacity duration-1000" ref={gradient}></div>
+				<article className="relative w-2/3 h-[16rem] rounded-lg drop-shadow-xl overflow-hidden group">
+					<div className="relative z-10 w-3/5 h-full p-4 grid justify-items-center bg-gradient-to-b from-contrast-dark1 to-contrast-dark2" onMouseOver={testimonialGrad}>	
+						<div className="gradient-radial opacity-0 absolute w-[13rem] h-[13rem] transition-opacity duration-300"></div>
+						<div className="w-12 h-12 rounded-full bg-cover bg-center bg-[url('/images/imgs/face1.jpg')]"></div>
+						<h3 className="py-4">First Testimonial</h3>
+						<p className="text-neutral-200">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, sint doloremque sunt enim deleniti eius iste officia obcaecati quo, 
 							beatae voluptatibus ducimus aperiam labore saepe nobis praesentium voluptatum est laudantium!
 						</p>
 					</div>
+					<div className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center bg-[url('/images/imgs/7.jpg')] transition-300"></div>
 				</article>
-				<article className="testimonial-media-container group">
-					<div className="absolute w-full h-full bg-cover bg-center bg-[url('/images/sectionOne/imgs/2.jpg')] testimonial-image-media lg:left-0 transition-300"></div>
-					<div className="testimonial-media lg:right-0">
-						<h3 className="py-4 group-hover:pl-8 transition-300">Second Testimonial</h3>
-						<p className="group-hover:text-neutral-300 transition-300">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, sint doloremque sunt enim deleniti eius iste officia obcaecati quo, 
-							beatae voluptatibus ducimus aperiam labore saepe nobis praesentium voluptatum est laudantium! Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-							Saepe, sunt. Amet magni, commodi consequatur pariatur ducimus nobis, eum temporibus repellat nisi cupiditate voluptatibus rem laborum quia, corrupti ipsam obcaecati natus.
-						</p>
-					</div>
-				</article>
-				<article className="testimonial-media-container group">
-					<div className="absolute w-full h-full bg-cover bg-center bg-[url('/images/sectionOne/imgs/3.jpg')] testimonial-image-media lg:right-0 transition-300"></div>
-					<div className="testimonial-media">
-						<h3 className="py-4 group-hover:pl-8 transition-300">Third Testimonial</h3>
-						<p className="group-hover:text-neutral-300 transition-300">
+				<article className="relative w-2/3 h-[16rem] rounded-lg drop-shadow-xl overflow-hidden group">
+					<div className="relative z-10 w-3/5 h-full p-4 grid justify-items-center bg-gradient-to-b from-contrast-dark1 to-contrast-dark2">
+						<div className="w-12 h-12 rounded-full bg-cover bg-center bg-[url('/images/imgs/face2.jpg')]"></div>
+						<h3 className="py-4">Second Testimonial</h3>
+						<p className="text-neutral-200">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, sint doloremque sunt enim deleniti eius iste officia obcaecati quo, 
 							beatae voluptatibus ducimus aperiam labore saepe nobis praesentium voluptatum est laudantium!
 						</p>
 					</div>
+					<div className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center bg-[url('/images/imgs/6.jpg')] transition-300"></div>
+				</article>
+				<article className="relative w-2/3 h-[16rem] rounded-lg drop-shadow-xl overflow-hidden group">
+					<div className="relative z-10 w-3/5 h-full p-4 grid justify-items-center bg-gradient-to-b from-contrast-dark1 to-contrast-dark2">
+						<div className="w-12 h-12 rounded-full bg-cover bg-center bg-[url('/images/imgs/face3.jpg')]"></div>
+						<h3 className="py-4">Thid Testimonial</h3>
+						<p className="text-neutral-200">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, sint doloremque sunt enim deleniti eius iste officia obcaecati quo, 
+							beatae voluptatibus ducimus aperiam labore saepe nobis praesentium voluptatum est laudantium!
+						</p>
+					</div>
+					<div className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center bg-[url('/images/imgs/4.jpg')] transition-300"></div>
 				</article>
 			</section>
 		</main>

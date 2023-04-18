@@ -6,11 +6,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundColor : {
+      colors : {
         'main' : '#1C241C',
         'secondary' : '#15181A',
         'contrast' : '#CCD5D0',
         'gradient' : '#003C1B',
+        'contrast-dark1' : "#5B635C",
+        'contrast-dark2' : "#848C86",
       },
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],

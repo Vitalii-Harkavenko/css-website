@@ -28,12 +28,12 @@ export const FilterDarken = () => {
 export const Partners = () => {
 	return (
 		<div className="w-full h-[8vh] px-12 flex justify-between flex-wrap">
-			<p className="font-montserrat-semi-bold text-[1.5rem] px-4">Partner</p>
-			<p className="font-montserrat-semi-bold text-[1.5rem] px-4">Client</p>
-			<p className="font-montserrat-semi-bold text-[1.5rem] px-4">Partner</p>
-			<p className="font-montserrat-semi-bold text-[1.5rem] px-4">Client</p>
-			<p className="font-montserrat-semi-bold text-[1.5rem] px-4">Partner</p>
-			<p className="font-montserrat-semi-bold text-[1.5rem] px-4">Client</p>
+			<p className="font-montserrat-semi-bold text-[1.5rem] px-4 my-auto">Partner</p>
+			<p className="font-montserrat-semi-bold text-[1.5rem] px-4 my-auto">Client</p>
+			<p className="font-montserrat-semi-bold text-[1.5rem] px-4 my-auto">Partner</p>
+			<p className="font-montserrat-semi-bold text-[1.5rem] px-4 my-auto">Client</p>
+			<p className="font-montserrat-semi-bold text-[1.5rem] px-4 my-auto">Partner</p>
+			<p className="font-montserrat-semi-bold text-[1.5rem] px-4 my-auto">Client</p>
 		</div>
 	)
 }
@@ -44,5 +44,29 @@ export const Back = () => {
 			<Link to="/" className="absolute h-full left-12 duration-200 ease-in-out group-hover:translate-y-[-100%] font-montserrat-thin">Back</Link>
 			<Link to="/" className="absolute h-full left-12 duration-200 ease-in-out translate-y-[100%] group-hover:translate-y-[0] font-montserrat">Back</Link>
 		</nav>
+	)
+}
+export const PseudoContent = () => {
+	return (
+		<>
+			<div>
+				<h3 className="mb-2">Section Title</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus fuga assumenda in? Obcaecati reprehenderit expedita consequatur tenetur.
+				</p>
+			</div>
+			<div>
+				<h3 className="mb-2">Section Title</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus fuga assumenda in? Obcaecati reprehenderit expedita consequatur tenetur.
+				</p>
+			</div>
+			<div>
+				<h3 className="mb-2">Section Title</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus fuga assumenda in? Obcaecati reprehenderit expedita consequatur tenetur.
+				</p>
+			</div>
+		</>
 	)
 }
