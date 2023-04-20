@@ -2,8 +2,9 @@ import { useEffect, useRef } from 'react';
 import { Filter, FilterDarken, Partners, Back, PseudoContent } from './SmallComponents';
 
 export default function LandingPage() {
-	const slider = useRef(null);
 	const heroImage = useRef(null);
+	const scrollContainer = useRef(null);
+	const scrollContent = useRef(null);
 
 	const handleHeroHover = (x, y) => {
 		heroImage.current.style.left = x;
@@ -17,27 +18,39 @@ export default function LandingPage() {
 		})
 	}
 
-	const handleClick = (direction) => {
-		/*
-		const frame = parseInt(slider.current.style.left) || 0;
-		let newFrame = frame;
-		if (direction === "right" && frame <= -200) 
-			newFrame = 0;
-		if (direction === "left" && frame >= 0) 
-			newFrame = -200;
-		if (direction === "left" && frame < 0) 
-			newFrame = frame + 100; 
-		else if (direction === "right" && frame > -200) 
-			newFrame = frame - 100;
-
-		slider.current.style.left = `${newFrame}%`;
-		*/
-	};
-
 	useEffect(() => {
-		//window.scrollTo({ top : 0 });
-		handleClick();
+		const container = scrollContainer.current;
+		scrollContent.current.style.left = "0px";
+
+		const handleWheel = (event) => {
+			const content = parseInt(scrollContent.current.style.left);
+			scrollContainer.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			if (content <= -1800 && event.deltaY > 0) {
+				event.preventDefault();
+				return;
+			}
+			if (content === 0 && event.deltaY < 0) {}
+			else {
+				event.preventDefault();
+				scrollContent.current.style.left = `${content - event.deltaY}px`;
+			};
+	  	};
+  
+	  	container.addEventListener('wheel', handleWheel, { passive: false });
+		window.scrollTo({top : 0});
+  
+	  	return () => {
+			container.removeEventListener('wheel', handleWheel);
+	  	};
 	}, []);
+
+	const scrollArrow = (direction) => {
+		const content = parseInt(scrollContent.current.style.left);
+		if (content >= -1450 && direction < 0)
+			scrollContent.current.style.left = `${content + direction}px`;
+		if (content <= -700 && direction > 0)
+			scrollContent.current.style.left = `${content + direction}px`;
+	}
 
   return (
 	<main className="relative w-screen h-screen text-white">
@@ -90,29 +103,33 @@ export default function LandingPage() {
 					So, suitable for websites offering real products or services like shops, restaurants, real estate, etc.
 				</p>
 			</div>
-			<div className='w-screen h-screen shadow p-12 flex overflow-x-scroll gap-36 bg-secondary'>
-				<div className='relative h-full lg:min-w-[35vw] min-w-[400px] group overflow-hidden'>
-					<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/6.jpg')] group-hover:h-[70%] transition-300"></div>
-					<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
-						<PseudoContent />
+			<div className='relative w-screen h-screen shadow p-12 overflow-x-scroll bg-secondary' ref={scrollContainer}>
+				<div className="absolute h-12 top-1/2 -translate-y-1/2 z-20 w-12 bg-cover bg-center bg-[url('/images/imgs/left.png')]" onClick={() => scrollArrow(700)}></div>
+				<div className="absolute h-12 top-1/2 -translate-y-1/2 z-20 w-12 right-0 bg-cover bg-center bg-[url('/images/imgs/right.png')]" onClick={() => scrollArrow(-700)}></div>
+				<div className="relative flex gap-36 transition-all duration-500 w-full h-full pl-[30vw]" ref={scrollContent}>
+					<div className='relative h-full lg:min-w-[35vw] min-w-[400px] group overflow-hidden'>
+						<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/6.jpg')] group-hover:h-[70%] transition-300"></div>
+						<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
+							<PseudoContent />
+						</div>
 					</div>
-				</div>
-				<div className='relative h-full lg:min-w-[35vw] min-w-[400px] group overflow-hidden'>
-					<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/7.jpg')] group-hover:h-[70%] transition-300"></div>
-					<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
-						<PseudoContent />
+					<div className='relative h-full lg:min-w-[35vw] min-w-[400px] group overflow-hidden'>
+						<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/7.jpg')] group-hover:h-[70%] transition-300"></div>
+						<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
+							<PseudoContent />
+						</div>
 					</div>
-				</div>
-				<div className='relative h-full lg:min-w-[35vw] min-w-[400px] group overflow-hidden'>
-					<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/1.jpg')] group-hover:h-[70%] transition-300"></div>
-					<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
-						<PseudoContent />
+					<div className='relative h-full lg:min-w-[35vw] min-w-[400px] group overflow-hidden'>
+						<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/1.jpg')] group-hover:h-[70%] transition-300"></div>
+						<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
+							<PseudoContent />
+						</div>
 					</div>
-				</div>
-				<div className='relative h-full lg:min-w-[35vw] min-w-[400px] group overflow-hidden'>
-					<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/2.jpg')] group-hover:h-[70%] transition-300"></div>
-					<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
-						<PseudoContent />
+					<div className='relative h-full lg:min-w-[35vw] min-w-[400px] group overflow-hidden'>
+						<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/2.jpg')] group-hover:h-[70%] transition-300"></div>
+						<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
+							<PseudoContent />
+						</div>
 					</div>
 				</div>
 			</div>
