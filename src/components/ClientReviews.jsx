@@ -33,13 +33,13 @@ export default function ClientReviews() {
 				</p>
 			</div>
 			<section className="relative grid justify-items-center overflow-hidden text-center gap-[10vh] py-[10vh] w-screen min-h-screen bg-contrast">
-				<div className="absolute rounded-full gradient-radial h-[100vw] w-[100vw] -translate-x-1/2 -translate-y-1/2 transition-opacity duration-1000" ref={gradient}></div>
+				<div className="absolute rounded-full gradient-radial h-[80vw] w-[80vw] -translate-x-1/2 -translate-y-1/2 transition-opacity duration-1000" ref={gradient}></div>
 				<article className="relative w-2/3 h-[16rem] rounded-lg drop-shadow-xl overflow-hidden group">
-					<div className="relative z-10 w-3/5 h-full p-4 grid justify-items-center bg-gradient-to-b from-contrast-dark1 to-contrast-dark2" onMouseOver={testimonialGrad}>	
-						<div className="gradient-radial opacity-0 absolute w-[13rem] h-[13rem] transition-opacity duration-300"></div>
+					<div className="relative z-10 w-3/5 h-full p-4 grid justify-items-center bg-gradient-to-b from-contrast-dark1 to-contrast-dark2" >	
+						<div className="absolute h-full w-full bg-gradient-to-t from-neutral-400 to-transparent top-full group-hover:top-1/4 transition-300"></div>
 						<div className="w-12 h-12 rounded-full bg-cover bg-center bg-[url('/images/imgs/face1.jpg')]"></div>
-						<h3 className="py-4">First Testimonial</h3>
-						<p className="text-neutral-200">
+						<h3 className="py-4 z-20">First Testimonial</h3>
+						<p className="text-neutral-200 z-20">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, sint doloremque sunt enim deleniti eius iste officia obcaecati quo, 
 							beatae voluptatibus ducimus aperiam labore saepe nobis praesentium voluptatum est laudantium!
 						</p>
@@ -47,10 +47,11 @@ export default function ClientReviews() {
 					<div className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center bg-[url('/images/imgs/7.jpg')] transition-300"></div>
 				</article>
 				<article className="relative w-2/3 h-[16rem] rounded-lg drop-shadow-xl overflow-hidden group">
-					<div className="relative z-10 w-3/5 h-full p-4 grid justify-items-center bg-gradient-to-b from-contrast-dark1 to-contrast-dark2">
+					<div className="relative z-10 w-3/5 h-full p-4 grid justify-items-center bg-gradient-to-b from-contrast-dark1 to-contrast-dark2" >	
+						<div className="absolute h-full w-full bg-gradient-to-t from-neutral-400 to-transparent top-full group-hover:top-1/4 transition-300"></div>
 						<div className="w-12 h-12 rounded-full bg-cover bg-center bg-[url('/images/imgs/face2.jpg')]"></div>
-						<h3 className="py-4">Second Testimonial</h3>
-						<p className="text-neutral-200">
+						<h3 className="py-4 z-20">First Testimonial</h3>
+						<p className="text-neutral-200 z-20">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, sint doloremque sunt enim deleniti eius iste officia obcaecati quo, 
 							beatae voluptatibus ducimus aperiam labore saepe nobis praesentium voluptatum est laudantium!
 						</p>
@@ -58,10 +59,11 @@ export default function ClientReviews() {
 					<div className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center bg-[url('/images/imgs/6.jpg')] transition-300"></div>
 				</article>
 				<article className="relative w-2/3 h-[16rem] rounded-lg drop-shadow-xl overflow-hidden group">
-					<div className="relative z-10 w-3/5 h-full p-4 grid justify-items-center bg-gradient-to-b from-contrast-dark1 to-contrast-dark2">
+					<div className="relative z-10 w-3/5 h-full p-4 grid justify-items-center bg-gradient-to-b from-contrast-dark1 to-contrast-dark2" >	
+						<div className="absolute h-full w-full bg-gradient-to-t from-neutral-400 to-transparent top-full group-hover:top-1/4 transition-300"></div>
 						<div className="w-12 h-12 rounded-full bg-cover bg-center bg-[url('/images/imgs/face3.jpg')]"></div>
-						<h3 className="py-4">Thid Testimonial</h3>
-						<p className="text-neutral-200">
+						<h3 className="py-4 z-20">First Testimonial</h3>
+						<p className="text-neutral-200 z-20">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, sint doloremque sunt enim deleniti eius iste officia obcaecati quo, 
 							beatae voluptatibus ducimus aperiam labore saepe nobis praesentium voluptatum est laudantium!
 						</p>

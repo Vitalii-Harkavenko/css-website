@@ -30,7 +30,7 @@ h3 {
 	@apply absolute right-0 -translate-y-1/2 h-[15vh] w-2 bg-neutral-700 rounded-l-md hover:w-6 transition-all duration-300;
 }
 .gradient-radial {
-	background-image: radial-gradient(ellipse at center, #ffffff7d 0%, #ff882000 70%);
+	background-image: radial-gradient(ellipse at center, #ffffffb2 0%, #ff882000 70%);
 }
 .shadow {
 	filter: drop-shadow(0 0 1rem black);
@@ -47,6 +47,12 @@ h3 {
 }
 .transition-300 {
 	@apply transition-all duration-300;
+}
+.transition-100 {
+	@apply transition-all duration-100;
+}
+.mobile-popup-hover-style {
+	@apply after:w-0 after:transition-all after:duration-300 hover:after:w-12 after:h-1 after:rounded-lg after:bg-gradient after:top-full after:-translate-x-1/2 after:left-1/2 after:absolute;
 }
 @font-face {
 	font-family: "Montserrat";

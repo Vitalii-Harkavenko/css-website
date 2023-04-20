@@ -82,39 +82,37 @@ export default function LandingPage() {
 		</div>
 		<section className="relative min-h-screen w-screen mt-[90vh] z-30 border-solid border-t-[1px] border-t-white">
 			<div className="absolute left-1/2 -translate-x-1/2 z-40 w-[10vw] h-[1vh] bg-white rounded-xl -translate-y-1/2 hover:w-[15vw] transition-all duration-300" onClick={handleSwipe}></div>
-			<div className="backdrop-blur-md px-12 py-6 border-solid border-b-[1px] border-b-white">
+			<div className="backdrop-blur-md px-12 py-4 text-center border-solid border-b-[1px] border-b-white">
 				<Partners />
-				<h2 className="mx-auto w-fit">Some General Description</h2>
-				<p className="m-8 text-center">
+				<h2 className="mt-4">Some General Description</h2>
+				<p className="mx-8 my-4">
 					This is the first section's landing page example, showing an interior design firm and made in more simple and strict look.
 					So, suitable for websites offering real products or services like shops, restaurants, real estate, etc.
 				</p>
 			</div>
-			<div className='relative w-screen h-screen shadow p-12 bg-secondary'>
-				<div className='h-full w-full flex overflow-x-scroll gap-36'>
-					<div className='relative h-full min-w-[35vw] group overflow-hidden'>
-						<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/6.jpg')] group-hover:h-[70%] transition-300"></div>
-						<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
-							<PseudoContent />
-						</div>
+			<div className='w-screen h-screen shadow p-12 flex overflow-x-scroll gap-36 bg-secondary'>
+				<div className='relative h-full lg:min-w-[35vw] min-w-[400px] group overflow-hidden'>
+					<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/6.jpg')] group-hover:h-[70%] transition-300"></div>
+					<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
+						<PseudoContent />
 					</div>
-					<div className='relative h-full min-w-[35vw] group overflow-hidden'>
-						<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/7.jpg')] group-hover:h-[70%] transition-300"></div>
-						<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
-							<PseudoContent />
-						</div>
+				</div>
+				<div className='relative h-full lg:min-w-[35vw] min-w-[400px] group overflow-hidden'>
+					<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/7.jpg')] group-hover:h-[70%] transition-300"></div>
+					<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
+						<PseudoContent />
 					</div>
-					<div className='relative h-full min-w-[35vw] group overflow-hidden'>
-						<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/1.jpg')] group-hover:h-[70%] transition-300"></div>
-						<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
-							<PseudoContent />
-						</div>
+				</div>
+				<div className='relative h-full lg:min-w-[35vw] min-w-[400px] group overflow-hidden'>
+					<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/1.jpg')] group-hover:h-[70%] transition-300"></div>
+					<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
+						<PseudoContent />
 					</div>
-					<div className='relative h-full min-w-[35vw] group overflow-hidden'>
-						<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/2.jpg')] group-hover:h-[70%] transition-300"></div>
-						<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
-							<PseudoContent />
-						</div>
+				</div>
+				<div className='relative h-full lg:min-w-[35vw] min-w-[400px] group overflow-hidden'>
+					<div className="absolute top-1/2 -translate-y-1/2 h-full w-full bg-cover bg-center bg-[url('/images/imgs/2.jpg')] group-hover:h-[70%] transition-300"></div>
+					<div className="absolute h-full w-1/2 right-0 backdrop-blur-md z-10 flex flex-col justify-between p-6 group-hover:-right-1/2 transition-300">
+						<PseudoContent />
 					</div>
 				</div>
 			</div>

@@ -27,13 +27,13 @@ export const FilterDarken = () => {
 }
 export const Partners = () => {
 	return (
-		<div className="w-full h-[8vh] px-12 flex justify-between flex-wrap">
-			<p className="font-montserrat-semi-bold text-[1.5rem] px-4 my-auto">Partner</p>
-			<p className="font-montserrat-semi-bold text-[1.5rem] px-4 my-auto">Client</p>
-			<p className="font-montserrat-semi-bold text-[1.5rem] px-4 my-auto">Partner</p>
-			<p className="font-montserrat-semi-bold text-[1.5rem] px-4 my-auto">Client</p>
-			<p className="font-montserrat-semi-bold text-[1.5rem] px-4 my-auto">Partner</p>
-			<p className="font-montserrat-semi-bold text-[1.5rem] px-4 my-auto">Client</p>
+		<div className="w-full px-12 flex justify-between flex-wrap">
+			<p className="font-montserrat-semi-bold text-[1.5rem] m-2">Partner</p>
+			<p className="font-montserrat-semi-bold text-[1.5rem] m-2">Client</p>
+			<p className="font-montserrat-semi-bold text-[1.5rem] m-2">Partner</p>
+			<p className="font-montserrat-semi-bold text-[1.5rem] m-2">Client</p>
+			<p className="font-montserrat-semi-bold text-[1.5rem] m-2">Partner</p>
+			<p className="font-montserrat-semi-bold text-[1.5rem] m-2">Client</p>
 		</div>
 	)
 }
